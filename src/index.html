@@ -1,10 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Harley Martins" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="" />
+    <title>SaaS - Modelo</title>
     <link rel="stylesheet" href="./css/outputTailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./js/sliders.js" defer></script>
   </head>
-  <body></body>
+  <body class="bg-slate-100">
+    <header
+      class="flex justify-between items-center w-full px-4 py-4 flex-wrap bg-orange-600"
+    >
+      <div id="header__links--aside" class="md:hidden">
+        <button>
+          <i class="fa fa-bars text-2xl text-white" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="header__links" class="items-center gap-4 hidden md:flex">
+        <img
+          class="w-10 h-10 max-w-16 rounded"
+          src="/assets/avatar.png"
+          alt="logo"
+        />
+        <span class="flex items-center gap-2">
+          <a href="#">Quem somos</a>
+          <a href="#">Local</a>
+          <a href="#">FAQ</a>
+        </span>
+      </div>
+
+      <div id="header__search" class="md:w-2/4">
+        <div class="relative flex items-center">
+          <button class="absolute left-3 text-gray-400 hover:text-gray-600">
+            <i class="fas fa-search"></i>
+          </button>
+          <input
+            type="text"
+            class="md:w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none"
+            placeholder="Pesquisar..."
+          />
+        </div>
+      </div>
+
+      <div id="header__bag">
+        <div
+          class="flex items-center gap-4 px-4 rounded-md w-full max-h-96 bg-white"
+        >
+          <i class="fa fa-shopping-bag text-2xl" aria-hidden="true"></i>
+          <span>
+            <h3>R$ 0,00</h3>
+            <p>0 itens</p>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main
+      class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-5"
+    >
+      <!-- BANNERS -->
+      <section id="banners">
+        <!-- Container do Slider -->
+        <div class="relative w-full max-w-3xl mx-auto overflow-hidden my-10">
+          <!-- Slides -->
+          <div id="slider" class="flex transition-transform duration-500">
+            <div class="w-full flex-shrink-0">
+              <img src="/assets/banner_teste.png" alt="" />
+            </div>
+            <div class="w-full flex-shrink-0">
+              <img
+                src="https://via.placeholder.com/900x400/F43F5E/FFFFFF"
+                class="w-full"
+                alt="Slide 2"
+              />
+            </div>
+            <div class="w-full flex-shrink-0">
+              <img
+                src="https://via.placeholder.com/900x400/10B981/FFFFFF"
+                class="w-full"
+                alt="Slide 3"
+              />
+            </div>
+          </div>
+
+          <!-- Botões de Navegação -->
+          <button
+            id="prev"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-lg hover:bg-opacity-100 transition"
+          >
+            &#10094;
+          </button>
+          <button
+            id="next"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-lg hover:bg-opacity-100 transition"
+          >
+            &#10095;
+          </button>
+
+          <div id="tags" class="px-2 py-2 bg-slate-200 overflow-auto w-full">
+            <div class="flex items-center gap-4 overflow-auto w-3/4">
+              <a
+                href="#"
+                class="bg-white px-4 py-1 rounded border-x-2 border-y-2"
+                >Teste</a
+              >
+              <a
+                href="#"
+                class="bg-white px-4 py-1 rounded border-x-2 border-y-2"
+                >Teste</a
+              >
+              <a
+                href="#"
+                class="bg-white px-4 py-1 rounded border-x-2 border-y-2"
+                >Teste</a
+              >
+              <a
+                href="#"
+                class="bg-white px-4 py-1 rounded border-x-2 border-y-2"
+                >Teste</a
+              >
+              <a
+                href="#"
+                class="bg-white px-4 py-1 rounded border-x-2 border-y-2"
+                >Teste</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FIM BANNERS -->
+    </main>
+  </body>
 </html>
